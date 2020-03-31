@@ -10,7 +10,8 @@ state={
   manager: '' ,
   players: [] ,
   balance: '' ,
-  value: ''
+  value: '',
+  message: ''
     };
 
 async componentDidMount() {
@@ -19,6 +20,20 @@ async componentDidMount() {
   const balance = await web3.eth.getBalance(lottery.options.address);
   this.setState({manager, players, balance});
 }
+onSubmit = async event =>{
+  event.preventDefault();
+    await window.ethereum.enable() ;
+  const accounts = await web3.eth.getAccounts();
+  this.setState({message: 'Waiting on transaction Success ...'});
+  await lottery.methods.enter().send({
+    from:accounts[0] ,
+    value: web3.utils.toWei(this.state.value, 'ether')
+    });
+    this.setState({message: 'You have been entered !'});
+  };
+
+
+
 
 render() {
   return (
@@ -29,7 +44,7 @@ render() {
   </p>
 <hr />
 
-<form>
+<form onSubmit = {this.onSubmit}>
 <h4>Want to try your Luck ?</h4>
 <div>
 <label>Amount of ether to enter </label>
@@ -40,7 +55,8 @@ onChange = {event => this.setState({value :event.target.value})}
 </div>
 <button>Enter</button>
 </form>
-
+<hr />
+<h1>{this.state.message}</h1>
 
 
 
