@@ -9,7 +9,8 @@ class App extends Component {
 state={
   manager: '' ,
   players: [] ,
-  balance: ''
+  balance: '' ,
+  value: ''
     };
 
 async componentDidMount() {
@@ -23,9 +24,26 @@ render() {
   return (
   <div>
   <h2>Lottery Contract</h2>
-  <p>This contract is manager by {this.state.manager}.  
+  <p>This contract is manager by {this.state.manager}.
     There are currently {this.state.players.length} people entered copmetating to win {web3.utils.fromWei(this.state.balance, 'ether')} ether
   </p>
+<hr />
+
+<form>
+<h4>Want to try your Luck ?</h4>
+<div>
+<label>Amount of ether to enter </label>
+<input
+value = {this.state.value}
+onChange = {event => this.setState({value :event.target.value})}
+/>
+</div>
+<button>Enter</button>
+</form>
+
+
+
+
   </div>
   );
 }
