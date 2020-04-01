@@ -36,7 +36,7 @@ you will see the output in the browse at `http://localhost:3000/`
 - We are assuming that the first account in the wallet is participating into the lottery.
 
 #### This is the UI part of the lottery
-#### We can have the Lottery contract and the compilation and deployment script at [Sourav Suman ](https://www.linkedin.com/in/srvsmn)
+#### We can have the Lottery contract and the compilation and deployment script at [Lottery contract](https://github.com/srv-smn/blockchain_lottery-project_contract)
 
 For any query feel free to contact [Sourav Suman ](https://www.linkedin.com/in/srvsmn)
 
