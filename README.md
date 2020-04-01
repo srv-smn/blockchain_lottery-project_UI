@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#  BlockChain Lottery Project
+### This is the UI for Blockchain Lottery
+This is a basic projet based on the line of Block chain , where user can enter into the lottery and the manager can pick a winner .
 
-## Available Scripts
+### Language used
+- React JS
 
-In the project directory, you can run:
+### Dependencies
+- metamask must be installed in the user's browser  
+- Metamask must be connected to Rinkeby Network
+- You must have `react JS` and `Node` installed
 
-### `npm start`
+### How to run this code :
+*make the following change in lottery.js*
+```
+import web3 from './web3';
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+const address = '0x2639b5c596E99a20aa50102633C5ff5f3A762154';
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+const abi = [{"constant":true,"inputs":[],......."  A LOT OF TEXT ...."constructor"}];
 
-### `npm test`
+export default new web3.eth.Contract(abi, address);
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ```
 
-### `npm run build`
+***address*** : it is the address where the contract is deployed .So when you deploy the contract you will get the deployed address on console so copy that and paste it over here .
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*After doing the above changes*
+open *Command Promt* and run the code in the current folder `npm run start`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+you will see the output in the browse at `http://localhost:3000/`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Further Scope of improvement
+- add error handling in buttons
+- add the name of the winner who won the Lottery
+- We are assuming that the first account in the wallet is participating into the lottery.
 
-### `npm run eject`
+#### This is the UI part of the lottery
+#### We can have the Lottery contract and the compilation and deployment script at [Sourav Suman ](https://www.linkedin.com/in/srvsmn)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For any query feel free to contact [Sourav Suman ](https://www.linkedin.com/in/srvsmn)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Screen Shot :
+![project screenshot](/picture/1.png)
