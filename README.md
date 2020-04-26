@@ -39,7 +39,7 @@ you will see the output in the browse at [Live Demo](https://bit.ly/sourav-suman
 #### We can have the Lottery contract and the compilation and deployment script at [Lottery contract](https://github.com/srv-smn/blockchain_lottery-project_contract)
 
 For any query feel free to contact [Sourav Suman ](https://www.linkedin.com/in/srvsmn)
-#### Project is deployed at `https://bit.ly/sourav-suman-lottery`
+#### Project is deployed at[Live Demo ](https://bit.ly/sourav-suman-lottery)
 
 #### Screen Shot :
 ![project screenshot](/picture/1.png)
