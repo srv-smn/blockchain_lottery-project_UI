@@ -48,6 +48,16 @@ renderCards(){
       style:{overflowWrap: 'break-word'},
     },
     {
+      header:  '0.01 ETH',
+      description:
+        'Minimum amount to participate in Lottery',
+      meta:'Minimum Contribution',
+      color: 'green',
+      doubling: true,
+      centered: true,
+      style:{overflowWrap: 'break-word'},
+    },
+    {
       header: this.state.players.length,
       description:
         'Total participants in the lottery',
@@ -106,7 +116,7 @@ render() {
   {this.renderCards()}
   </p>
   <Container style = {{marginTop : '30px'}}>
-  <Card  centered= {true} color = 'yellow' centered ={true} fluid ={true}>
+  <Card  centered= {true} color = 'yellow' fluid ={true}>
   <Form onSubmit = {this.onSubmit} size ="big" >
   <p><h2 align = 'center' color='blue'>Want to try luck ?</h2></p>
           <Form.Input
@@ -122,7 +132,7 @@ render() {
 </Card>
 </Container>
 <Container style = {{marginTop : '30px'}}>
-<Card  centered= {true} color = 'yellow' centered ={true} fluid ={true} >
+<Card  centered= {true} color = 'yellow' fluid ={true} >
 <p><h2 align = 'center' color='blue'>Ready to pick a winner?</h2></p>
 <Button type='submit' positive ={true} fluid ={true} onClick ={this.onClick}>Pick a winner !</Button>
 <h5>{this.state.message}</h5>
